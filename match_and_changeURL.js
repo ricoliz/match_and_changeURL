@@ -1,12 +1,12 @@
-<script>
 $(function() {
 
 var newURL = "";
 var host = "";
 host = window.location.host;
 if((host == 'ここと') || (host == 'ここに特定のドメインを入れる')){
+	//このドメインだとそのまま
 }else{
-
+	//それ以外だと以下を適用する
 		$(".js_replace").each(function(i, e){
 		　//取得する：　ahrefとimgを取得
 			var $a = $(this).find("a");
@@ -39,7 +39,7 @@ if((host == 'ここと') || (host == 'ここに特定のドメインを入れる
 				// スラッシュが先頭の時に、/aaaとパスをくっつける。←こうしたいパス
 				if(path.match(checkHref)) {
 					var newHref = "/aaa" + path;
-					//key情報を
+					//設定
 					$element.attr(data[tag], newHref);
 				}
 			}
@@ -48,6 +48,3 @@ if((host == 'ここと') || (host == 'ここに特定のドメインを入れる
 
 }
 });
-
-
-</script>
